@@ -1,0 +1,105 @@
+import java.util.*; 
+public class mainF 
+{ 
+public static void main(String[] args) 
+{ 
+int[] array ={1,2,3,4,5,6,7,8,9,10}; 
+Scanner input = new Scanner(System.in); 
+for(int i = 0;i<array.length;i++) 
+{ 
+System.out.printf("Array %d = %d\n",i+1,array[i]); 
+} 
+System.out.println("Delete an element froman
+array at your\n desired or specific position."); 
+System.out.print("Input number: "); 
+int select = input.nextInt(); 
+if(select>10) 
+{ 
+System.out.print("Invalid Input!!!"); 
+} 
+else 
+{ 
+array[select-1]=0; 
+for(int i = 0;i<array.length;i++) 
+{ 
+if(array[i]==0) 
+{ 
+System.out.printf("Array %d = DELETED\n",i+1); 
+} 
+else 
+{ 
+System.out.printf("Array %d = %d\n",i+1,array[i]); 
+} 
+} 
+}
+System.out.printf("\n\nProgrammed by: Mitch Saguni"); 
+} 
+}
+import java.util.*; 
+public class MainProj 
+{ 
+public static void main(String[] args) 
+{ 
+String array; 
+Scanner input = new Scanner(System.in); 
+System.out.print("Input a string: "); 
+array = input.nextLine(); 
+for(int i = 0;i<array.length();i++)
+{ 
+if(array.charAt(i)==' ') 
+{ 
+System.out.print(array.charAt(i)); 
+} 
+else 
+{ 
+System.out.print("*"); 
+} 
+} 
+System.out.println("\n\nProgrammed by: Mitch S. Saguni"); 
+} 
+}
+
+import java.util.*; 
+public class mainProjj { 
+public static void main(String[] args) { 
+int[] array = {2,4,6,8,10}; 
+System.out.println("Printing array using Recursion:"); 
+printArray(array,array.length-1); 
+System.out.println("\n\nProgrammed by: Mitch S. Saguni"); 
+} 
+public static void printArray(int[] arr, int lngth) 
+{ 
+if(lngth>0) 
+printArray(arr,lngth-1); 
+System.out.print(arr[lngth]+" "); 
+} 
+}
+
+4. Sum of all array elements. – using recursion. 
+import java.util.*; 
+public class mainClasss { 
+public static void main(String[] args) { 
+int[] array = {2,4,6,8,10}; 
+System.out.println("Printing array using Recursion:"); 
+printArray(array,array.length-1); 
+System.out.println("\nPrinting the sumof an element in
+array using Recursion:"); 
+System.out.println(sumOfArray(array,array.length- 
+1)); 
+System.out.println("\n\nProgrammed by: Mitch S. Saguni"); 
+} 
+public static void printArray(int[] arr, int lngth) 
+{ 
+if(lngth>0) 
+printArray(arr,lngth-1); 
+System.out.print(arr[lngth]+" "); 
+} 
+public static int sumOfArray(int[] arr, int lngth) 
+{ 
+if(lngth<0) 
+{ 
+return 0; 
+} 
+return sumOfArray(arr,lngth-1)+arr[lngth]; 
+} 
+}
